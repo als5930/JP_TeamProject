@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+  
+  <configuration>
+
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings>
+
+	<typeAliases>
+		<typeAlias type="com.biz.big.model.ProductVO" alias="ProVO"/>
+		<typeAlias type="com.biz.big.model.DeptVO" alias="DeptVO"/>
+		<typeAlias type="com.biz.big.model.MemberVO" alias="MemVO"/>
+		<typeAlias type="com.biz.big.model.IoListVO" alias="IoListVO"/>
+	</typeAliases>
+</configuration>

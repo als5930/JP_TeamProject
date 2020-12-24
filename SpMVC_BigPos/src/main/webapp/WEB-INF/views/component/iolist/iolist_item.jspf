@@ -1,0 +1,19 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c" %>
+<c:set var="rootPath" value="${pageContext.request.contextPath}" />        
+<tr class="iolist_item" data-pcode="${VO.io_seq}">
+	<td>${VO.io_seq}</td>
+	<td>${VO.io_date}</td>
+	<td>${VO.io_time}</td>
+	<td>${VO.io_dcode}</td>
+	<td>${VO.io_inout}</td>
+	<td>${VO.io_pcode}</td>
+	<td>${VO.io_vat}</td>
+	<td>${VO.io_qty}</td>
+	<td>${VO.io_price}</td>
+	<td>${VO.io_amt}</td>
+	<td>${VO.io_tax}</td>
+	<td>${VO.io_total}</td>
+</tr>

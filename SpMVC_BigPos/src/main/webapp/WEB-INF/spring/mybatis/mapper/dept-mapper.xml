@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.biz.big.persistence.DeptDao">
+
+	<select id="selectAll" resultType="DeptVO">
+		SELECT * FROM tbl_dept
+	</select>
+
+	<select id="findByID" resultType="DeptVO">
+		SELECT * FROM tbl_dept WHERE
+		d_code = #{id}
+	</select>
+
+
+	<insert id="insert">
+		INSERT INTO tbl_dept(
+		D_CODE,
+		D_NAME,
+		D_SID,
+		D_CEO,
+		D_TEL,
+		D_ADDR,
+		D_PRODUCT
+		) VALUES (
+		#{d_code},
+		#{d_name},
+		#{d_sid},
+		#{d_ceo},
+		#{d_tel},
+		#{d_addr},
+		#{d_product}
+		)
+	</insert>
+
+	<update id="update">
+		UPDATE tbl_dept SET
+
+		D_NAME = #{d_name},
+		D_SID = #{d_sid},
+		D_CEO = #{d_ceo},
+		D_TEL = #{d_tel},
+		D_ADDR = #{d_addr},
+		D_PRODUCT = #{d_product}
+
+
+		WHERE d_code = #{d_code}
+	</update>
+
+	<delete id="delete">
+		DELETE FROM tbl_dept
+
+		WHERE d_code = #{d_code}
+	</delete>
+</mapper>

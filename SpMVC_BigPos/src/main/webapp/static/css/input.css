@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+form fieldset {
+	width: 80%;
+	margin: 10px auto;
+	border: 3px solid black;
+	border-radius: 5px;
+}
+
+form fieldset legend {
+	color: black;
+	font-weight: bolder;
+}
+
+label {
+	display: inline-block;
+	width: 20%;
+	text-align: right;
+	margin: 4px;
+	padding: 8px;
+	color: white;
+	font-weight: bolder;
+}
+
+input {
+	display: inline-block;
+	width: 60%;
+	margin: 4px;
+	padding: 8px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+input.m_code {
+	width:50%;
+}
+
+button.m_code_gen {
+	display: inline-block;
+	padding:8px 16px;
+	background-color: gray;
+	cursor: pointer;
+	border:none;
+	border-radius: 5px;
+}
+
+
+button#p_code_gen:hover,button#p_code_gen:hover {
+	background-color: gray;
+	color:black;
+}
+
+#btn_box {
+	text-align: right;
+	width: 80%;
+}
+
+#btn_box button {
+	padding: 8px 16px;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+}
+
+#btn_box button:first-child {
+	background-color: gray;
+}
+
+#btn_box button:last-child {
+	background-color: black;
+}
+
+#btn_box button:hover {
+	background-color: gray;
+	color: white;
+}
