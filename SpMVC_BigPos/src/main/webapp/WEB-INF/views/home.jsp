@@ -19,18 +19,29 @@
 }
 
 header {
-	background-image: url("${rootPath}/static/image/main.jpg");
-	background-attachment: fixed;
+	position: relative;
+	height: 500px;
+	color: white;
+	background-image: url("../image/53.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 100%;
-	color: white;
-	text-align: center;
-	padding: 2rem;
+	background-size: 80% 80%;
+	background-attachment: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+header h1 {
+	font-weight: 500;
+	color: black;
+	text-shadow: -1px 0 rgb(5, 245, 245), 0 1px rgb(198, 0, 248), 0 1px
+		rgb(0, 232, 248), 0 -1px rgb(13, 235, 243);
 }
 
 body {
-	background-image: url("${rootPath}/static/image/main.jpg");
+	background-image: url("${rootPath}/static/image/1237.jpg");
 	height: 100%;
 	width: 100%;
 	background-position: center;
@@ -42,12 +53,20 @@ header h2 {
 	margin: 16px;
 	text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
+
+footer {
+	background-color: blue;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	margin-top: 16%;
+}
 </style>
 
 </head>
 <body>
 	<header>
-		<h2>BigPOS 시스템 매입매출 관리 종합 프로젝트</h2>
+		<h1>BigPOS 시스템 매입매출 관리 종합 프로젝트</h1>
 	</header>
 	<%@ include file="/WEB-INF/views/include/include-nav.jspf"%>
 	<section>
@@ -86,20 +105,34 @@ header h2 {
 			<c:when test="${BODY == 'LOGIN'}">
 				<%@ include file="/WEB-INF/views/component/member/member_login.jspf"%>
 			</c:when>
-			
+
 			<c:when test="${BODY == 'IOLIST_HOME'}">
 				<%@ include file="/WEB-INF/views/component/iolist/iolist_list.jspf"%>
 			</c:when>
-			
+
 			<c:when test="${BODY == 'IO_WRITE'}">
 				<%@ include file="/WEB-INF/views/component/iolist/iolist_write.jspf"%>
 			</c:when>
+
+			<c:when test="${BODY == 'IPRICE_HOME'}">
+				<%@ include file="/WEB-INF/views/component/iprice/iprice_list.jspf"%>
+			</c:when>
+			<c:when test="${BODY == 'IP_WRITE'}">
+				<%@ include file="/WEB-INF/views/component/iprice/iprice_write.jspf"%>
+			</c:when>
+
 
 			<c:otherwise>
 				<%@ include file="/WEB-INF/views/include/include-main.jspf"%>
 			</c:otherwise>
 
 		</c:choose>
+	</section>
+	<section>
+		<footer>
+			<address>copyRight &copy; als3478@naver.com</address>
+		</footer>
+
 	</section>
 </body>
 </html>

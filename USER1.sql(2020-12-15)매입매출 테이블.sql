@@ -15,10 +15,17 @@ io_tax	NUMBER,
 io_total	NUMBER			
 );
 
+INSERT INTO tbl_iolist(io_seq, io_date,io_time,io_dcode,io_inout,io_pcode,io_vat,io_qty,io_price,io_amt,io_tax,io_total) 
+VALUES ('1','2020-12-24','12:55','D001','2','P001','1','1','1','1','1','5');
+
+
+
 DROP TABLE tbl_iolist;
 
 CREATE SEQUENCE seq_iolist
 START WITH 1 INCREMENT BY 1;
+
+drop sequence seq_iolist;
 
 commit;
 
@@ -26,8 +33,7 @@ SELECT * FROM tbl_dept;
 
 
 CREATE TABLE tbl_dept(
-d_seq	NUMBER	NOT NULL	PRIMARY KEY	,
-d_code	VARCHAR2(5)	NOT NULL,	
+d_code	VARCHAR2(5)	NOT NULL PRIMARY KEY,	
 d_name	nVARCHAR2(20)	NOT NULL,		
 d_sid	VARCHAR2(13)	NOT NULL,		
 d_ceo	nVARCHAR2(20)	NOT NULL,		
@@ -66,12 +72,13 @@ START WITH 1 INCREMENT BY 1;
 commit;
 
 
-SELECT IO.io_date,P.p_name,D.d_name,D.d_ceo,IO.io_qty,P.p_iprice,IO.io_amt,io.io_price,IO.io_inout,IO.io_total
+SELECT IO.io_seq,IO.io_date,P.p_name,D.d_name,D.d_ceo,IO.io_qty,P.p_iprice,IO.io_amt,io.io_price,IO.io_total
 FROM tbl_iolist IO
 LEFT JOIN tbl_dept D
 ON IO.io_date = D.d_name
 LEFT JOIN tbl_product P
-ON D.d_name = P.p_name;
+ON D.d_name = P.p_name
+WHERE P.p_name IS NULL;
 
 
 SELECT IO.io_date,P.p_name,D.d_name,D.d_ceo,IO.io_qty,P.p_oprice,IO.io_amt,io.io_price,IO.io_inout,IO.io_total
@@ -81,8 +88,8 @@ ON IO.io_date = D.d_name
 LEFT JOIN tbl_product P
 ON D.d_name = P.p_name;
 
-
 SELECT * FROM tbl_iolist;
+
 
 CREATE TABLE tbl_login (
 username	VARCHAR2(30)		PRIMARY KEY,

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.biz.big.persistence.IpriceDao">
+
+
+	<select id="select">
+		SELECT
+
+		IO.io_date,P.p_name,D.d_name,D.d_ceo,IO.io_qty,P.p_iprice,IO.io_amt,io.io_price,IO.io_total
+		FROM tbl_iolist IO
+		LEFT JOIN tbl_dept D
+		ON IO.io_date = D.d_name
+		LEFT JOIN tbl_product P
+		ON D.d_name = P.p_name
+
+	</select>
+
+	<insert id="insert">
+	
+	</insert>
+
+
+	<update id="update">
+
+	</update>
+
+	<delete id="delete">
+		DELETE FROM tbl_iolist
+
+		WHERE io_seq = #{id}
+	</delete>
+
+
+
+
+
+
+</mapper>
+  

@@ -3,7 +3,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form"  prefix="form"%>
 
 <c:set var="rootPath" value="${pageContext.request.contextPath}" />
-<link rel="stylesheet" type="text/css" href="${rootPath}/static/css/input.css?ver=2020-08-22" />
+<link rel="stylesheet" type="text/css" href="${rootPath}/static/css/input.css?ver=2020-08-23" />
 <script>
 	$(function() {
 		function getICode() {

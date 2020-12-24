@@ -30,7 +30,6 @@ article {
 
 #pro_info p {
 	width: 60%;
-	color: white;
 }
 </style>
 <script>

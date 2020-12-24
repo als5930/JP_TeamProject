@@ -3,7 +3,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form"  prefix="form"%>
 
 <c:set var="rootPath" value="${pageContext.request.contextPath}" />
-<link rel="stylesheet" type="text/css" href="${rootPath}/static/css/input.css?ver=2020-08-22" />
+<link rel="stylesheet" type="text/css" href="${rootPath}/static/css/input.css?ver=2020-08-25" />
 <script>
 	
 	var rootPath = "${rootPath}"
@@ -40,7 +40,9 @@
 		})
 	})
 </script>
+
 <form:form modelAttribute="PRO_VO">
+
 	<fieldset>
 		<legend>상품정보 등록</legend>
 		<div>

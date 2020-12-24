@@ -22,7 +22,7 @@ ul li {
 	cursor: pointer;
 }
 
-ul li:nth-child(5) {
+ul li:nth-child(6) {
 	margin-left: auto;
 }
 
@@ -81,6 +81,9 @@ div.toggle {
 			} else if(text == "매입매출 원장") {
 				document.location.href ="${rootPath}/iolist/"
 						
+			} else if(text == "매입리스트") {
+				document.location.href ="${rootPath}/iprice/"
+						
 				
 				
 			} else if(text == "Home") {
@@ -104,6 +107,8 @@ div.toggle {
 		<li>상품관리</li>
 		<li>거래처관리</li>
 		<li>매입매출 원장</li>
+		<li>매입리스트</li>
+		
 		<c:if test="${empty LOGIN}">
 			<li>로그인</li>
 			<li>회원가입</li>
